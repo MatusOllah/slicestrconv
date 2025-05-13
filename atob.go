@@ -27,3 +27,8 @@ func ParseBoolSlice(s string) ([]bool, error) {
 
 	return theSlice, nil
 }
+
+// Atob is equivalent to ParseBoolSlice(s).
+func Atob(s string) ([]bool, error) {
+	return ParseBoolSlice(s)
+}

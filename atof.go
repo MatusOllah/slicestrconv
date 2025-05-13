@@ -50,3 +50,8 @@ func ParseFloat64Slice(s string, base int) ([]float64, error) {
 
 	return theSlice, nil
 }
+
+// Atof is equivalent to ParseFloat64Slice(s, 10).
+func Atof(s string) ([]float64, error) {
+	return ParseFloat64Slice(s, 10)
+}

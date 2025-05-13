@@ -50,3 +50,8 @@ func ParseComplex128Slice(s string, base int) ([]complex128, error) {
 
 	return theSlice, nil
 }
+
+// Atoc is equivalent to ParseComplex128Slice(s, 10).
+func Atoc(s string) ([]complex128, error) {
+	return ParseComplex128Slice(s, 10)
+}

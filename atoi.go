@@ -234,3 +234,8 @@ func ParseUint64Slice(s string, base int) ([]uint64, error) {
 
 	return theSlice, nil
 }
+
+// Atoi is equivalent to ParseIntSlice(s, 10).
+func Atoi(s string) ([]int, error) {
+	return ParseIntSlice(s, 10)
+}
