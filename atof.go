@@ -18,6 +18,10 @@ func ParseFloat32Slice(s string, base int) ([]float32, error) {
 
 	var theSlice []float32
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseFloat(strings.TrimSpace(v), base)
 		if err != nil {
 			return nil, err
@@ -41,6 +45,10 @@ func ParseFloat64Slice(s string, base int) ([]float64, error) {
 
 	var theSlice []float64
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseFloat(strings.TrimSpace(v), base)
 		if err != nil {
 			return nil, err

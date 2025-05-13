@@ -18,6 +18,10 @@ func ParseIntSlice(s string, base int) ([]int, error) {
 
 	var theSlice []int
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseInt(strings.TrimSpace(v), base, 64)
 		if err != nil {
 			return nil, err
@@ -41,6 +45,10 @@ func ParseInt8Slice(s string, base int) ([]int8, error) {
 
 	var theSlice []int8
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseInt(strings.TrimSpace(v), base, 8)
 		if err != nil {
 			return nil, err
@@ -64,6 +72,10 @@ func ParseInt16Slice(s string, base int) ([]int16, error) {
 
 	var theSlice []int16
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseInt(strings.TrimSpace(v), base, 16)
 		if err != nil {
 			return nil, err
@@ -87,6 +99,10 @@ func ParseInt32Slice(s string, base int) ([]int32, error) {
 
 	var theSlice []int32
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseInt(strings.TrimSpace(v), base, 32)
 		if err != nil {
 			return nil, err
@@ -110,6 +126,10 @@ func ParseInt64Slice(s string, base int) ([]int64, error) {
 
 	var theSlice []int64
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseInt(strings.TrimSpace(v), base, 64)
 		if err != nil {
 			return nil, err
@@ -133,6 +153,10 @@ func ParseUintSlice(s string, base int) ([]uint, error) {
 
 	var theSlice []uint
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseUint(strings.TrimSpace(v), base, 64)
 		if err != nil {
 			return nil, err
@@ -156,6 +180,10 @@ func ParseUint8Slice(s string, base int) ([]uint8, error) {
 
 	var theSlice []uint8
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseUint(strings.TrimSpace(v), base, 8)
 		if err != nil {
 			return nil, err
@@ -179,6 +207,10 @@ func ParseUint16Slice(s string, base int) ([]uint16, error) {
 
 	var theSlice []uint16
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseUint(strings.TrimSpace(v), base, 16)
 		if err != nil {
 			return nil, err
@@ -202,6 +234,10 @@ func ParseUint32Slice(s string, base int) ([]uint32, error) {
 
 	var theSlice []uint32
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseUint(strings.TrimSpace(v), base, 32)
 		if err != nil {
 			return nil, err
@@ -225,6 +261,10 @@ func ParseUint64Slice(s string, base int) ([]uint64, error) {
 
 	var theSlice []uint64
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseUint(strings.TrimSpace(v), base, 64)
 		if err != nil {
 			return nil, err

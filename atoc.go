@@ -18,6 +18,10 @@ func ParseComplex64Slice(s string, base int) ([]complex64, error) {
 
 	var theSlice []complex64
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseComplex(strings.TrimSpace(v), base)
 		if err != nil {
 			return nil, err
@@ -41,6 +45,10 @@ func ParseComplex128Slice(s string, base int) ([]complex128, error) {
 
 	var theSlice []complex128
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseComplex(strings.TrimSpace(v), base)
 		if err != nil {
 			return nil, err

@@ -18,6 +18,10 @@ func ParseBoolSlice(s string) ([]bool, error) {
 
 	var theSlice []bool
 	for _, v := range values {
+		if v == "" {
+			continue
+		}
+
 		value, err := strconv.ParseBool(strings.TrimSpace(v))
 		if err != nil {
 			return nil, err
