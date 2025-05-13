@@ -7,14 +7,10 @@ import (
 
 // ParseBoolSlice parses and returns the []bool slice represented by the string s.
 func ParseBoolSlice(s string) ([]bool, error) {
-	if !strings.HasPrefix(s, OpeningBracket) || !strings.HasSuffix(s, ClosingBracket) {
-		return nil, ErrInvalidSyntax
+	values, err := parseStringSlice(s)
+	if err != nil {
+		return nil, err
 	}
-
-	s = strings.TrimPrefix(s, OpeningBracket)
-	s = strings.TrimSuffix(s, ClosingBracket)
-
-	values := strings.Split(s, Delimiter)
 
 	var theSlice []bool
 	for _, v := range values {
